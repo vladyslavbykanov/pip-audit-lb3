@@ -17,4 +17,4 @@ jobs:
 
       - run: pip install pip-audit
 
-      - run: pip-audit -r requirements.txt --strict
+      - run: pip-audit -r requirements2.txt --strict
