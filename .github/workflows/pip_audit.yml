@@ -13,8 +13,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - run: pip install -r requirements2.txt
+      - run: pip install -r requirements.txt
 
       - run: pip install pip-audit
 
-      - run: pip-audit -r requirements2.txt --strict
+      - run: pip-audit -r requirements.txt --strict
