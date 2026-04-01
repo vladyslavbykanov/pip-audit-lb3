@@ -5,20 +5,16 @@ on: [push]
 jobs:
   audit:
     runs-on: ubuntu-latest
-
+    
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt
 
-      - name: Install pip-audit
-        run: pip install pip-audit
+      - run: pip install pip-audit
 
-      - name: Run audit
-        run: pip-audit -r requirements.txt --strict
+      - run: pip-audit -r requirements.txt --strict
